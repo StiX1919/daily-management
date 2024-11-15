@@ -1,4 +1,8 @@
 .create-card {
     display: flex;
     flex-direction: column;
+
+    .difficulties-container {
+        display: flex;
+    }
 }

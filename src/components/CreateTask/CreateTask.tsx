@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './CreateTask.css'
+import './CreateTask.scss'
 import useForm from '../../hooks/useForm'
 import RadioButton from '../RadioButton/RadioButton';
 
@@ -43,11 +43,13 @@ function CreateTask() {
   return (
     <>
         <form className='create-card' onSubmit={handleSubmit}>
+            <div className='difficulties-container'>
+                {difficulties.map((e,i) => <RadioButton name={'taskDifficulty'} value={e} onChange={handleUpdate}/>)}
+            </div>
             <input className='task-name' type='text' name='taskName' value={formValues.taskName} onChange={handleUpdate}/>
             <select className='task-frequency' name='taskFrequency' value={formValues.taskFrequency} onChange={handleUpdate}>
                 {frequencies.map((e,i) => <option key={i} value={e}>{e}</option>)}
             </select> 
-            {difficulties.map((e,i) => <RadioButton name={'taskDifficulty'} value={e} onChange={handleUpdate}/>)}
             {/* <input className='task-difficulty' type='radio' value={formValues.taskdifficulty} onChange={handleUpdate}/> */}
             <select className='task-stat' name="taskStat" value={formValues.taskstat} onChange={handleUpdate}>
                 {stats.map((e,i) => <option key={i} value={e}>{e}</option>)}

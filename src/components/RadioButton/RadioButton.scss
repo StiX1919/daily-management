@@ -1,4 +1,7 @@
 .radio-container {
     display: flex;
     flex-direction: column;
+    border: solid white 2px;
+    border-right: 0;
+    border-radius: 10px 10px 0 0;
 }

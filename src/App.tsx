@@ -5,12 +5,14 @@ import './App.css'
 
 import CreateTask from './components/CreateTask/CreateTask'
 import StatChart from './components/RadarChart/RadarChart'
+import List from './components/List/List'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <List />
       <StatChart />
       <CreateTask/>
     </>

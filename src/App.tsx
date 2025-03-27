@@ -15,10 +15,6 @@ function App() {
       <List />
       <StatChart />
       <CreateTask/>
-      {/* create quests or challanges for bonus skill points.
-      share quests
-      game system using skills?
-      */}
     </>
   )
 }

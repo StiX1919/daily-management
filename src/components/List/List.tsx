@@ -1,6 +1,4 @@
-import { Chart } from "chart.js"
 import { useState } from "react"
-import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, RadarChart, Radar } from "recharts"
 
 function List() {
     const [skills, setSkills] = useState([]);
@@ -16,7 +14,7 @@ function List() {
     }
 
     const skillTag = ({name, lvl, progress}) => {
-    
+        //add types
         return (
             <div>
                 <p>{name}</p>

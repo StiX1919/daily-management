@@ -17,12 +17,17 @@ function List() {
         //add types
         return (
             <div>
+                {/* add associated attribute as color or faded so you know which one it's connected to*/}
                 <p>{name}</p>
                 <p>{lvl}</p>
                 <p>{progress}</p>
+                {/* add exp bar design with percentage filled */}
             </div>
         )
     }
+
+    //level math for exp needed to level up further
+    // 1st idea: (currLvl + 1) * 100
 
   return (
     <>

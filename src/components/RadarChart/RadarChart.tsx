@@ -10,6 +10,9 @@ function StatChart() {
         { name: 'Wisdom', x: 10 },
         { name: 'Charisma', x: 10 },
     ]
+    //x should be increased as level approaches/passes initial threshold
+    //x = highest ability level rounded up to the nearest 10.
+    //make scaleable to check lower ability scores
 
   return (
     <>

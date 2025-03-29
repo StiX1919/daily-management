@@ -19,6 +19,7 @@ function CreateTask() {
     'Wisdom',
     'Charisma'
   ];
+  //rename to Abilities
   const skills = [
     'cooking',
     'drawing',
@@ -31,6 +32,7 @@ function CreateTask() {
     'Difficult',
     'Punishing'
   ]
+  //add base xp value and multiplier value for each difficulty 
   const { formValues, handleUpdate, handleSubmit } = useForm({
     taskName: '',
     taskFrequency: '',

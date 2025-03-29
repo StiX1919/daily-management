@@ -13,6 +13,24 @@ function List() {
         setSkills([...skills, skillObj])
     }
 
+    const expBar = (experience: number) => {
+        //keep total exp earned and derive level from total?
+        function getLvl(exp: number) {
+            let remainingExp = exp;
+            let level = 0;
+            while(remainingExp > level * 100) {
+                level++;
+                remainingExp -= level * 100;
+                console.log(remainingExp, level)
+            }
+            return {level, exp: remainingExp}
+        }
+        const {level, exp} = getLvl(experience)
+        return (
+            <div>Curr level: {level}</div>
+        )
+    }
+
     const skillTag = ({name, lvl, progress}) => {
         //add types
         return (
@@ -37,6 +55,7 @@ function List() {
         </div>
 
         {skills.map(skill => skillTag(skill))}
+        {expBar(1500)}
     </>
   )
 }
